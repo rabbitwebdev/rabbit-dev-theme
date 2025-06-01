@@ -1,0 +1,352 @@
+.block-page-scroll {
+  /* nav {
+  	position: fixed;
+  	top: 0;
+  	width: 100%;
+  	padding: 1rem;
+  	z-index: 999;
+  	display: flex;
+  	justify-content: space-between;
+  } */
+  /* a:first-of-type {
+  	width: 48px;
+  	aspect-ratio: 1;
+  	display: grid;
+  	place-items: center;
+  	color: white;
+  }
+  a:last-of-type {
+  	background: hsl(173 100% 51%);
+  	color: black;
+  	padding: 1rem 2rem;
+  	border-radius: 22px;
+  	text-decoration: none;
+  	font-weight: 120;
+  	transition: background 0.2s;
+  }
+  a:last-of-type:is(:hover, :focus-visible) {
+  	background: hsl(173 100% 40%);
+  } */
+  /* Text block styling */
+}
+.block-page-scroll section:nth-of-type(1) {
+  scroll-snap-align: center;
+  height: 100vh;
+}
+.block-page-scroll section:nth-of-type(2) {
+  scroll-snap-align: start;
+}
+.block-page-scroll article {
+  min-height: 100vh;
+}
+.block-page-scroll :is(h1, h2) {
+  font-weight: 600;
+  font-size: clamp(2.5rem, 3.35vw + 1rem, 8rem);
+  letter-spacing: -0.075ch;
+  margin: 0;
+}
+.block-page-scroll h1 {
+  color: hsl(0, 0%, 90%);
+}
+.block-page-scroll :is(section, article) {
+  position: relative;
+}
+.block-page-scroll .content {
+  margin: 0 auto;
+  width: 900px;
+  max-width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+}
+.block-page-scroll .fixed img {
+  height: 100%;
+  width: 150%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  left: 50%;
+  translate: -50% 0;
+  filter: brightness(0.5);
+}
+.block-page-scroll section:first-of-type img {
+  left: 50%;
+  translate: -50% 0;
+}
+.block-page-scroll section:first-of-type {
+  padding: 2rem 1rem;
+  display: grid;
+  align-content: end;
+  justify-content: start;
+}
+.block-page-scroll section:first-of-type .fixed {
+  z-index: 5;
+}
+.block-page-scroll section:first-of-type .fixed .content {
+  margin: 0 auto;
+  width: 900px;
+  max-width: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: start;
+  padding: 6rem 2rem;
+  height: 100%;
+}
+.block-page-scroll section:first-of-type {
+  background: black;
+}
+.block-page-scroll section:first-of-type p {
+  font-size: clamp(1rem, 0.2vw + 1rem, 2rem);
+}
+.block-page-scroll section:nth-of-type(2) article:first-of-type .fixed {
+  z-index: 2;
+}
+.block-page-scroll section:nth-of-type(2) .content {
+  display: grid;
+  padding: 4rem 1rem;
+  align-content: center;
+}
+.block-page-scroll section:nth-of-type(2) article:first-of-type .content {
+  align-content: end;
+}
+.block-page-scroll section:nth-of-type(2) article:first-of-type .fixed::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: hsla(0, 0%, 0%, 0.25);
+}
+.block-page-scroll section:nth-of-type(2) article:first-of-type h2 {
+  padding: 1rem 0;
+}
+.block-page-scroll section:nth-of-type(2) article:nth-of-type(2) .fixed {
+  background: black;
+  z-index: 2;
+}
+.block-page-scroll section:nth-of-type(2) article:nth-of-type(3) .content {
+  align-content: start;
+}
+.block-page-scroll section:nth-of-type(2) article:nth-of-type(3) .fixed {
+  z-index: 2;
+}
+.block-page-scroll section:nth-of-type(2) article:nth-of-type(3) img {
+  filter: saturate(0.5) brightness(0.5);
+}
+.block-page-scroll .text-blocks {
+  max-width: 100%;
+  width: 40ch;
+  justify-self: end;
+  display: grid;
+  place-items: center;
+  gap: 2rem 0;
+}
+.block-page-scroll .chat-container {
+  height: 100vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: grid;
+  place-items: center;
+}
+.block-page-scroll .text-blocks p {
+  display: inline-block;
+  border-radius: 6px;
+  margin: 0;
+  font-size: clamp(1.5rem, 0.5vw + 1rem, 4rem);
+  font-weight: 120;
+}
+.block-page-scroll .text-blocks p:nth-of-type(even) {
+  justify-self: end;
+  text-align: right;
+  color: hsl(173, 100%, 51%);
+}
+.block-page-scroll .text-blocks p:nth-of-type(odd) {
+  justify-self: start;
+}
+.block-page-scroll .filler {
+  display: none;
+}
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .block-page-scroll {
+      /* Keyframes collection	*/
+    }
+    .block-page-scroll article {
+      view-timeline: --article;
+    }
+    .block-page-scroll .fixed {
+      position: fixed;
+      inset: 0;
+    }
+    .block-page-scroll .static {
+      position: absolute;
+      inset: 0;
+      z-index: 6;
+    }
+    .block-page-scroll .filler {
+      display: block;
+      width: 100%;
+      position: absolute;
+      bottom: 30vh;
+      padding: 1rem;
+    }
+    .block-page-scroll .text-blocks p {
+      animation: slide-in, fade-in;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+      animation-timeline: --article;
+    }
+    .block-page-scroll .text-blocks p:nth-of-type(1) {
+      animation-range: entry-crossing 50% entry-crossing 55%;
+    }
+    .block-page-scroll .text-blocks p:nth-of-type(2) {
+      animation-range: entry-crossing 55% entry-crossing 60%;
+    }
+    .block-page-scroll .text-blocks p:nth-of-type(3) {
+      animation-range: entry-crossing 60% entry-crossing 65%;
+    }
+    .block-page-scroll .text-blocks p:nth-of-type(4) {
+      animation-range: entry-crossing 65% entry-crossing 70%;
+    }
+    .block-page-scroll .text-blocks p:nth-of-type(5) {
+      animation-range: entry-crossing 70% entry-crossing 75%;
+    }
+    .block-page-scroll section:nth-of-type(2) article:last-of-type {
+      z-index: 5;
+    }
+    .block-page-scroll section:nth-of-type(2) article:nth-of-type(3) {
+      height: 400vh;
+    }
+    .block-page-scroll section:nth-of-type(2) article:nth-of-type(3) h2 {
+      margin-top: 80vh;
+    }
+    .block-page-scroll section:nth-of-type(2) article:last-of-type .fixed {
+      clip-path: ellipse(220% 200% at 50% 300%);
+      animation: unclip both linear;
+      animation-timeline: --article;
+      animation-range: entry 20% entry 80%;
+    }
+    .block-page-scroll .filler h2 {
+      animation: fade-away, fade-out;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --article;
+      animation-range: exit 40% exit 75%, exit 70% exit 90%;
+    }
+    .block-page-scroll .loud-wrap {
+      clip-path: inset(0 0 0 0);
+      animation: unmask both linear;
+      animation-timeline: --article;
+      animation-range: entry 20% entry 80%;
+      -webkit-mask: linear-gradient(white 50%, transparent) 0 100%/100% 200% no-repeat;
+              mask: linear-gradient(white 50%, transparent) 0 100%/100% 200% no-repeat;
+    }
+    .block-page-scroll .text-wrap {
+      position: sticky;
+      bottom: 4rem;
+      transform-origin: 50% 0;
+      animation: fade-away both linear, fade-out both linear;
+      animation-timeline: --article;
+      animation-range: exit 40% exit 75%, exit 70% exit 100%;
+    }
+    .block-page-scroll .text-blocks {
+      animation: fade-out both linear;
+      animation-timeline: --article;
+      animation-range: entry-crossing 75% entry-crossing 100%;
+    }
+    .block-page-scroll section:nth-of-type(2) article:nth-of-type(3) .fixed {
+      animation: fade-in both linear, fade-out both linear;
+      animation-timeline: --article, --article;
+      animation-range: entry 45% exit-crossing 0%, exit 0% exit 15%;
+    }
+    .block-page-scroll section:nth-of-type(2) article:nth-of-type(2) .fixed {
+      animation: fade-in;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+      animation-timeline: --article;
+      animation-range: entry 60% exit 30%;
+    }
+    .block-page-scroll section:nth-of-type(2) article:nth-of-type(2) h2 {
+      animation: slide-in, fade-in, fade-away, fade-out;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+      animation-timeline: view(), view(), --article, --article;
+      animation-range: entry 100% cover 25%, entry 100% cover 35%, exit 20% exit 40%, exit 40% exit 50%;
+    }
+    .block-page-scroll section:nth-of-type(2) article:first-of-type h2 {
+      animation: slide-up both linear;
+      animation-timeline: --article;
+      animation-range: entry 20% entry 80%;
+    }
+    .block-page-scroll section:nth-of-type(2) article:first-of-type img {
+      animation: scale-down both linear;
+      animation-timeline: --article;
+      animation-range: entry;
+    }
+    .block-page-scroll section:nth-of-type(2) article:first-of-type .fixed {
+      clip-path: ellipse(220% 200% at 50% 300%);
+      animation: unclip both linear;
+      animation-timeline: --article;
+      animation-range: entry 0 entry 100%;
+    }
+    .block-page-scroll section:first-of-type {
+      view-timeline: --section;
+    }
+    .block-page-scroll section:first-of-type .fixed {
+      animation: scale-and-move both linear, fade-out both linear;
+      animation-timeline: --section;
+      animation-range: exit 0% exit 50%, exit 0% exit 25%;
+      transform-origin: 50% 0;
+    }
+    @keyframes slide-in {
+      0% {
+        translate: 0 100%;
+      }
+    }
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+    }
+    @keyframes slide-up {
+      0% {
+        translate: 0 100%;
+      }
+    }
+    @keyframes fade-away {
+      to {
+        filter: blur(4rem);
+      }
+    }
+    @keyframes unmask {
+      to {
+        -webkit-mask-position: 0 0;
+                mask-position: 0 0;
+      }
+    }
+    @keyframes scale-down {
+      0% {
+        scale: 5;
+      }
+    }
+    @keyframes unclip {
+      to {
+        clip-path: ellipse(220% 200% at 50% 175%);
+      }
+    }
+    @keyframes fade-out {
+      to {
+        opacity: 0;
+      }
+    }
+    @keyframes scale-and-move {
+      to {
+        translate: 0 -10%;
+        scale: 0.35 0.5;
+      }
+    }
+  }
+}

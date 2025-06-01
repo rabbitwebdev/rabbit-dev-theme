@@ -1,0 +1,17 @@
+.block-vertical-slider {
+    height: 100%;
+
+    .swiper {
+        height: 100vh;
+
+        .swiper-slide {
+                flex-shrink: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+            }
+    }
+}

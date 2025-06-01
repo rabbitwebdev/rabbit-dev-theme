@@ -1,0 +1,66 @@
+.block-simple-hero {
+    position: relative;
+
+    .img-wrp {
+            z-index: 1;
+            display: block;
+            position: relative;
+
+            img {
+                object-fit: contain;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+    .background-img-wrp {
+        background-color: $primary;
+    }
+
+    .background-img-wrp.hero-img-wrp {
+
+        &.hero-full {
+            .simpleParallax {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+            
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover !important;
+                        opacity: 0.2;
+                        margin: auto;
+                    }
+                }
+        }
+        .simpleParallax {
+                height: 100%;
+                width: 100%;
+                display: flex;
+
+                img {
+                        width: 50vw;
+                        height: 50vh;
+                        object-fit: contain;
+                        opacity: 0.2;
+                        margin: auto;
+                    }
+            }
+                img {
+                        width: 50vw;
+                        height: 50vh;
+                        object-fit: contain;
+                        opacity: 0.2;
+                        margin: auto;
+                    }
+    } 
+
+                .background-img-wrp.hero-img-wrp {
+                    width: 100vw;
+                    height: 100vh;
+                    z-index: 0;
+                    margin: auto;
+                    display: flex;
+                }
+}

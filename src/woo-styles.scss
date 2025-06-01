@@ -1,0 +1,186 @@
+.woo-bunny-woo {
+    .product {
+        .product-wrp {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            @include media-breakpoint-down(md) {
+                flex-wrap: wrap;
+            }
+
+            div.images {
+                    float: none;
+                    width: 30%;
+
+                    @include media-breakpoint-down(md) {
+                        width: 20%;
+                    }
+
+                    .woocommerce-product-gallery__wrapper {
+                        position: sticky;
+                        top: 60px;
+
+                        .bunny-after-img-wrp {
+                            margin: 20px auto;
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                      
+                            form.cart {
+                                width: 100%;
+                                text-align: center;
+                                    display: flex;
+                                    align-items: center;
+                                    flex-direction: column;
+
+                                p.price {
+                                        color: #fff;
+                                        font-size: 14px;
+                                        position: relative;
+                                        width: fit-content;
+                                        text-align: center;
+
+                                        @include media-breakpoint-down(md) {
+                                            display: none;
+                                        }
+                                
+                                        span.onsale {
+                                            min-height: 10px;
+                                            min-width: 3.236em;
+                                            padding: 7px 10px;
+                                            font-size: 1em;
+                                            font-weight: 500;
+                                            position: absolute;
+                                            text-align: center;
+                                            line-height: 1;
+                                            top: 0;
+                                            right: -72px;
+                                            left: auto;
+                                            margin: 0;
+                                            border-radius: 100%;
+                                            background-color: #b95f3f;
+                                            color: #fff;
+                                            font-size: 12px;
+                                            z-index: 9;
+                                            text-transform: uppercase;
+                                            border-radius: 0;
+                                        }
+                                    }
+                            }
+                            button.button.alt {
+                                background-color: transparent;
+                                border-radius: 0;
+                                border: 1px solid #fff;
+                                text-transform: uppercase;
+                                transition: all 1.3s ease;
+                                padding: 12px 10px;
+                                width: 100%;
+                                font-size: 14px;
+                                font-weight: 400;
+                                letter-spacing: 1px;
+
+                                @include media-breakpoint-down(md) {
+                                position: fixed;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 98%;
+                                    margin: auto;
+                                    float: none;
+                                    box-shadow: none;
+                                    padding: 12px 5px;
+                                    transform: translate(1%, -5px);
+                                    background-color: #b95f3f;
+                                    border-color: #b95f3f;
+                                }
+                                
+
+
+                                &:hover {
+                                    color: #fff;
+                                    transition: all 1.3s ease;
+                                    background-color: darken($secondary, 5);
+                                    border-color: darken($secondary, 5) ;
+                                    letter-spacing: 2px;
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+
+            div.summary {
+                float: none;
+                width: 50%;
+                clear: none;
+                margin: 0 ;
+                @include media-breakpoint-down(md) {
+                        width: 75%;
+                    }
+
+                h1.product_title {
+                    font-weight: $font-weight-bold;
+                    font-style: italic;
+                    margin-bottom: 3rem;
+
+                }
+
+                p.price {
+                        color: #fff;
+                        font-size: 1.25em;
+                        position: relative;
+                        width: fit-content;
+                        margin-bottom: 20px;
+
+                        span.onsale {
+                                min-height: 10px;
+                                min-width: 3.236em;
+                                padding: 7px 10px;
+                                font-size: 1em;
+                                font-weight: 500;
+                                position: absolute;
+                                text-align: center;
+                                line-height: 1;
+                                top: 0;
+                                right: -72px;
+                                left: auto;
+                                margin: 0;
+                                border-radius: 100%;
+                                background-color: #b95f3f;
+                                color: #fff;
+                                font-size: 12px;
+                                z-index: 9;
+                                text-transform: uppercase;
+                                border-radius: 0;
+                            }
+                    }
+            }
+        }
+    }
+}
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce #respond input#submit.alt,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button.alt,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button.alt {
+    background-color: $secondary;
+    color: #fff;
+    font-size: $btn-font-size-sm;
+    padding: $btn-padding-x-sm $btn-padding-y-sm;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase;
+        transition: all 1.3s ease;
+        letter-spacing: 1px;
+        box-shadow: $box-shadow-lg;
+    
+        &:hover {
+            transition: all 1.3s ease;
+            background-color: darken($secondary, 5);
+            letter-spacing: 2px;
+        }
+}

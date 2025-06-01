@@ -1,0 +1,51 @@
+header#masthead {
+    position: fixed;
+    
+        /* Transition effect when sliding down (and up) */
+&.site-header {
+
+    &.visible {
+        background-color: transparent;
+top: 0;
+    transition: all 1.3s;
+    
+    }
+
+         &.visible-color {
+            background-color: $primary;
+             top: 0;
+             transition: all 1.3s;
+    
+         }
+
+    &.hidden {
+        background-color: transparent;
+        top: -80px;
+        transition: all 1.3s;
+    }
+
+    .custom-logo {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+        }
+        
+    .site-title {
+        a.title-link {
+            text-decoration: none ;
+            font-weight: 900;
+            font-style: italic;
+        }
+    }
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    ul#mega-menu-primary {
+.mega-current_page_item {
+    font-style: italic;
+}
+    }
+}
+}

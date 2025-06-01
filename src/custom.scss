@@ -1,0 +1,95 @@
+$primary: #0f0122;
+
+$secondary: #ff8154;
+
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    6: $spacer * 6,
+    10: $spacer * 10,
+);
+
+$btn-border-radius: 0;
+$btn-border-radius-sm: $btn-border-radius;
+$btn-border-radius-lg: 0;
+$btn-padding-x-lg: 30px;
+$btn-padding-y-lg: 5px;
+$btn-font-size-lg: 1.2rem;
+$btn-font-weight-lg: 700;
+$btn-font-weight: 700;
+
+$btn-padding-y-sm: 20px;
+$btn-padding-x-sm: 15px;
+$btn-font-size-sm: 1.1rem;
+$btn-font-weight-sm: 700;
+
+$box-shadow-lg: 0 2rem 3rem rgba(#000, .175);
+
+
+
+.bg-primary {
+    background-color: $primary;
+}
+
+.btn {
+text-transform: uppercase;
+letter-spacing: 1px;
+font-style: italic;
+transition: all 1.3s ease;
+color: #fff;
+
+&:hover {
+transition: all 1.3s ease;
+background-color: darken($primary, 5);
+}
+
+&.btn-secondary {
+    &:hover {
+            transition: all 1.3s ease;
+            background-color: darken($secondary, 5);
+        }
+}
+
+&.btn-sm {
+    letter-spacing: 3px;
+}
+}
+
+:root {
+    --woocommerce: #ff8154;
+    --wc-green: #7ad03a;
+    --wc-red: #a00;
+    --wc-orange: #ffba00;
+    --wc-blue: #2ea2cc;
+    --wc-primary: #ff8154;
+    --wc-primary-text: #fcfbfe;
+    --wc-secondary: #e9e6ed;
+    --wc-secondary-text: #515151;
+    --wc-highlight: #958e09;
+    --wc-highligh-text: white;
+    --wc-content-bg: #fff;
+    --wc-subtext: #767676;
+}
+
+.woocommerce button.button.alt {
+    background-color: $secondary;
+    border-radius: 0;
+    text-transform: uppercase;
+    transition: all 1.3s ease;
+
+    &:hover {
+            transition: all 1.3s ease;
+            background-color: darken($secondary, 5);
+        }
+}
+
+// body {
+//     main#page {
+//         overflow: hidden;
+//     }
+// }

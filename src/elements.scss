@@ -1,0 +1,266 @@
+
+.bg-img {
+    padding-top: ($spacer * 1.5) ;
+}
+
+.section-block {
+  position: relative;
+
+
+  .img-wrp {
+
+    &.is-center {
+        text-align: center;
+    }
+
+    .sm-img {
+            width: 100%;
+            max-width: 180px;
+            height: 180px;
+            object-fit: contain;
+            @include media-breakpoint-down(md) {
+                    height: 80px;
+                    max-width: 80px;
+                }
+        }
+
+        .med-img {
+            width: 100%;
+            max-width: 280px;
+            height: 280px;
+            object-fit: contain;
+            @include media-breakpoint-down(md){
+            height: 180px;
+            max-width: 180px;
+            }
+        }
+  }
+
+.text-fade-out {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 800ms linear, transform 500ms linear;
+    }
+
+.text-fade-out.hidden {
+opacity: 0 !important;
+transform: translateY(180px) !important;
+transition: opacity 1s ease-out, transform 2s ease-out;
+}
+
+.text-fade-in-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 800ms ease-out, transform 800ms ease-out;
+}
+
+.text-fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 800ms ease-in-out, transform 800ms ease-in-out;
+}
+ 
+.section-block-title {
+    position: absolute;
+    top: -20px;
+    left: 50px;
+    text-transform: uppercase;
+    overflow: hidden;
+
+    @include media-breakpoint-down(md) {
+        
+        left: 30px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        left: 20px;
+    }
+
+    h3 {
+        font-style: italic;
+        font-weight: 900;
+        color: #fff;
+    }
+}
+
+.content-wrp {
+    width: 100%;
+    max-width: 95%;
+    margin: auto;
+    padding: 5px;
+
+    .section-title {
+        .display-1 {
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            font-size: calc(1.635rem + 0.62vw);
+            color: #fff;
+        }
+
+        .display-2, .display-3 {
+            font-weight: 900;
+                font-style: italic;
+                text-transform: uppercase;
+                color: #fff;
+        }
+    }
+}
+
+
+                .animated-border {
+                    position: absolute;
+                    width: calc(100% - 10%);
+                    height: 2px;
+                    top: 0px;
+                    right: 20px;
+                    border-top: 2px solid #ffffffca;
+                    pointer-events: none;
+                }
+
+                .animated-border-left {
+                    position: absolute;
+                        width: calc(100% - 10%);
+                        height: 2px;
+                        top: 0px;
+                        right: 20px;
+                        border-top: 2px solid #ffffffca;
+                        pointer-events: none;
+                }
+
+                .animated-border-down-left {
+                    position: absolute;
+                        width: 3px;
+                        height: 80%;
+                        top: 10%;
+                        left: 20px;
+                        border-right: 3px solid $secondary;
+                        pointer-events: none;
+                }
+
+                                 .animated-border-down {
+                                     position: absolute;
+                                    width: 2px;
+                                        height: 100%;
+                                            top: 0%;
+                                        right: 20px;
+                                     border-right: 2px solid #ffffffca;
+                                     pointer-events: none;
+                                 }
+        
+                // .animated-border::before {
+                //     content: "";
+                //     position: absolute;
+                //     width: 100%;
+                //     height: 100%;
+                //     border-radius: 12px;
+                //     border: 3px solid cyan;
+                //     clip-path: inset(0 100% 0 0);
+                //     animation: none;
+                //     /* JS will update this */
+                // }
+}
+
+.background-img-wrp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: $primary;
+
+    &.hero-img-wrp {
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+
+        img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
+            opacity: 0.8;
+        }
+    }
+
+    .simpleParallax {
+        height: 100%;
+
+        img {
+                width: 100%;
+                height: 100%;
+                opacity: 0.5;
+                object-fit: cover;
+                object-position: center center;
+            }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+.w-50, .w-75 {
+
+    &.text-wrp {
+@include media-breakpoint-down(md) {
+        width: 100% !important;
+    }
+    }
+  
+}
+
+.content-wrp {
+    &.w-50, &.w-75, &.w-10 {
+        @include media-breakpoint-down(md) {
+            width: 100% !important;
+        }
+    }
+
+    &.hero-content-wrp {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+form.woocommerce-checkout {
+    background-color: #0e041b;
+        padding: 20px;
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+
+        @include media-breakpoint-down(md) {
+               flex-direction: column;
+            }
+
+        #customer_details {
+            width: 50%;
+
+            @include media-breakpoint-down(md) {
+                    width: 100%;
+                }
+
+                                .col-1 {
+                                    float: left;
+                                    width: 100%;
+                                }
+        }
+
+        #order_review_heading {
+            display: none;
+        }
+
+        #order_review {
+            width: 40%;
+
+            @include media-breakpoint-down(md){
+                width: 100%;
+            }
+        }
+}

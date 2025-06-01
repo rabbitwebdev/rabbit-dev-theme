@@ -1,0 +1,60 @@
+.block-text-and-media {
+    position: relative;
+
+
+    .background-img-wrp {
+        img {
+            opacity: 0.3;
+        }
+            &.small-contain {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .simpleParallax {
+                        height: 100%;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                                width: 50%;
+                                height: 50%;
+                                object-fit: contain;
+                            }
+                    }
+                img {
+                    width: 50%;
+                    height: 50%;
+                    object-fit: contain;
+                }
+            }
+            &.full-contain {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 90%;
+                    height: 90%;
+                    object-fit: contain;
+                }
+            }
+
+        &.full-cover {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100vw;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    // .img-wrp {
+    //     text-align: center;
+    // }
+}
