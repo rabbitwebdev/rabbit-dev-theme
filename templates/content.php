@@ -11,10 +11,10 @@ $content_style  = implode( ' ', $content_styles );
     return;
 } else { ?>
 <div class="text-wrp <?php echo esc_attr( $content_style ); ?>">
-    <div class="content   WYSIWYG">
+    <div class="content wysiwyg">
         <?php echo $content; ?>
-    </div> <!-- content end -->
-     </div> <!-- content end -->
+    </div> <!-- inner content end -->
+     </div> <!-- outer content end -->
   
 <?php } ?>
  

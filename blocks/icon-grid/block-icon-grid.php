@@ -151,7 +151,7 @@ $alignimage = $style_data['align'];
 <?php endif; ?>
 <div class=" <?php echo esc_attr( $width ); ?>"> <!-- Conatiner -->
 <div class="row align-items-center justify-content-center <?php echo $reverse_block ; ?> "> <!-- Row -->
-  
+  <?php if ($content) { ?>
     <div class="<?php echo esc_attr( $col_width ); ?>"> <!-- Col -->
         <div class="content-wrp <?php echo esc_attr( $content_wrap_size ) ;?>"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
         <?php if ( $title_text ) : ?>
@@ -186,7 +186,7 @@ $alignimage = $style_data['align'];
    
       </div> <!-- Content end -->
 </div> <!-- Col end -->
-
+<?php } ?>
 
     <?php if ( $image_block ) : 
     // Image variables.
