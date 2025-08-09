@@ -225,9 +225,7 @@ $alignimage = $style_data['align'];
           $text = get_sub_field('text');
           $svg = get_sub_field('icon_code');
            $link = get_sub_field('link');
-            $link_url = $link['url'];
-    $link_title = $link['title'];
-    $link_target = $link['target'] ? $link['target'] : '_self';
+          
         ?>
 
          <div class="feature col mb-4 ">
@@ -240,12 +238,15 @@ $alignimage = $style_data['align'];
         </div>
         <h2 class="fs-2 mb-3 fade-in-left"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><?php echo $title ?></h2>
         <div class="WYSIWIG mb-3 <?php echo esc_attr( $style_txt_string ); ?>"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><?php echo $text ?></div>
-        <?php if ($link) { ?>
-        <a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-lg btn-outline-light icon-link"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <?php if ($link) { 
+              $link_url = $link['url'];
+    $link_title = $link['title'];
+    $link_target = $link['target'] ? $link['target'] : '_self';
+            ?>
+        <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo $link_target ?>" class="btn btn-lg btn-outline-light icon-link"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
           <?php echo $link_title ?>
-        
         </a>
-        <?php } ?>
+        <?php } else {  } ?>
       
       </div>
 
