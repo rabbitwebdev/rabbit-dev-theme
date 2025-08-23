@@ -1,3 +1,7 @@
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+}
+
 $primary: #0f0122;
 
 $secondary: #ff8154;
@@ -32,9 +36,7 @@ $box-shadow-lg: 0 2rem 3rem rgba(#000, .175);
 
 
 
-.bg-primary {
-    background-color: var(--bs-primary-rgb);
-}
+
 
 .btn {
 text-transform: uppercase;

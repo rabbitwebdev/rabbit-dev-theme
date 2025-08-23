@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .bg-primary {
-  background-color: var(--bs-primary-rgb);
+  background-color: var(--bs-primary) !important;
 }
 
 .btn {
