@@ -197,6 +197,24 @@ function devrabbit_theme_cleanup_head() {
 }
 add_action('init', 'devrabbit_theme_cleanup_head');
 
+function customrabbitstyles(){
+    $primary_brand_colour = get_field('primary_brand_colour', 'option');
+
+     if ($primary_brand_colour) {
+        echo '<style>
+            :root {
+                --bs-primary: ' . esc_attr($primary_brand_colour) . ';
+            }
+            :root,
+            [data-bs-theme=light] {
+            --bs-body-bg: ' . esc_attr($theme_light_body) . ';
+
+    }
+        </style>';
+    }
+}
+add_action('wp_head', 'customrabbitstyles')
+
 // Callback function to insert 'styleselect' into the $buttons array
 function my_mce_buttons_2($buttons) {
     array_unshift($buttons, 'styleselect');
