@@ -33,7 +33,7 @@ $box-shadow-lg: 0 2rem 3rem rgba(#000, .175);
 
 
 .bg-primary {
-    background-color: $primary;
+    background-color: var(--bs-primary-rgb);
 }
 
 .btn {
