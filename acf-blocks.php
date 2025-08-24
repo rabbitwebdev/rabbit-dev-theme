@@ -249,3 +249,28 @@ acf_register_block_type(array(
 
     }
 }
+
+add_action('acf/init', 'my_acf_op_init');
+function my_acf_op_init() {
+
+    // Check function exists.
+    if( function_exists('acf_add_options_page') ) {
+
+        // Add parent.
+       $option_page = acf_add_options_page(array(
+            'menu_slug' => 'global-site-settings',
+            'page_title' => 'Global Site Settings',
+            'active' => true,
+            'menu_title' => 'Global Site',
+            'capability' => 'edit_posts',
+            'parent_slug' => '',
+            'position' => 8,
+            'icon_url' => 'dashicons-carrot',
+            'redirect' => true,
+            'post_id' => 'options',
+            'autoload' => false,
+            'update_button' => 'Update',
+            'updated_message' => 'Options Updated',
+        )); 
+    }
+}
