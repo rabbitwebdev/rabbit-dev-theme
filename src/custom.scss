@@ -47,11 +47,15 @@ background-color: var(--bs-primary);
 &.btn-primary {
     background-color: var(--bs-primary);
     border-radius: 0;
-
+    border-color: var(--bs-primary);
+    transition: all 1.3s ease;
+    letter-spacing: 0.5px;
     &:hover {
             transition: all 1.3s ease;
             background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
             filter: brightness(0.95);
+            letter-spacing: 1.5px;
         }
 }
 
