@@ -229,21 +229,21 @@ $alignimage = $style_data['align'];
         ?>
 
          <div class="feature col mb-4 ">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center fade-in  fs-2 mb-3"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <div class="feature-icon d-inline-flex align-items-center justify-content-center fade-in text-fade-in fs-2 mb-3"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
             <?php if ($svg) { ?>
             <?php echo $svg ?>
             <?php } else { ?>
             <?php echo wp_get_attachment_image( $image['ID'], 'large', '', array( 'class' => '' ) ); ?>
             <?php } ?>
         </div>
-        <h2 class="fs-2 mb-3 fade-in-left"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><?php echo $title ?></h2>
-        <div class="WYSIWIG mb-3 <?php echo esc_attr( $style_txt_string ); ?>"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><?php echo $text ?></div>
+        <h2 class="fs-3 mb-3 text-fade-in"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><?php echo $title ?></h2>
+        <div class="WYSIWIG text-fade-in mb-3 <?php echo esc_attr( $style_txt_string ); ?>"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><?php echo $text ?></div>
         <?php if ($link) { 
               $link_url = $link['url'];
     $link_title = $link['title'];
     $link_target = $link['target'] ? $link['target'] : '_self';
             ?>
-        <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo $link_target ?>" class="btn btn-lg btn-outline-light icon-link"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo $link_target ?>" class="btn btn-lg btn-outline-light icon-link text-fade-in"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
           <?php echo $link_title ?>
         </a>
         <?php } else {  } ?>
