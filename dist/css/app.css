@@ -10543,7 +10543,7 @@ textarea.form-control-lg {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #0d6efd;
+  background: var(--bs-rabbit-primary);
 }
 .background-img-wrp.hero-img-wrp {
   width: 100vw;
@@ -10827,7 +10827,7 @@ form.woocommerce-checkout #order_review {
   width: 100%;
 }
 .block-simple-hero .background-img-wrp {
-  background-color: #0d6efd;
+  background-color: var(--bs-rabbit-primary);
 }
 .block-simple-hero .background-img-wrp.hero-img-wrp.hero-full .simpleParallax {
   height: 100%;
