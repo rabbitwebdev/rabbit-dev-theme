@@ -90,6 +90,8 @@ add_theme_support( 'editor-font-sizes', array(
     )
 ) );
 
+
+require_once get_template_directory() . 'acf-blocks.php';
 require_once get_template_directory() . '/include/acf-fields.php';
 
 function mytheme_add_woocommerce_support() {
