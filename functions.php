@@ -200,6 +200,7 @@ add_action('init', 'devrabbit_theme_cleanup_head');
 function customrabbitstyles() {
     $primary_brand_colour = get_field('primary_brand_colour', 'option');
     $secondary_brand_colour = get_field('secondary_brand_colour', 'option');
+    $navbar_colour = get_field('navbar_colour', 'option');
      if ($primary_brand_colour) {
         echo '<style>
             :root {
@@ -209,6 +210,7 @@ function customrabbitstyles() {
                 --bs-secondary: ' . esc_attr($secondary_brand_colour) . ';
                 --bs-secondary-rgb: ' . esc_attr($secondary_brand_colour) . ';
                 --bs-rabbit-secondary: ' . esc_attr($secondary_brand_colour) . ';
+                --bs-navbar-color: ' . esc_attr($navbar_colour) . ';
             }
             .bg-primary {
                 background-color:var(--bs-primary) !important;
