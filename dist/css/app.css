@@ -51,6 +51,11 @@
   border-color: var(--bs-primary) !important;
   transition: all 1.3s ease;
   letter-spacing: 0.5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.4rem;
 }
 .wp-block-button__link:hover {
   transition: all 1.3s ease;
