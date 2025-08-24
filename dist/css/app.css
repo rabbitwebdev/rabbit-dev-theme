@@ -42,6 +42,24 @@
   letter-spacing: 3px;
 }
 
+.wp-block-button__link {
+  text-transform: uppercase;
+  font-style: italic;
+  color: #fff;
+  background-color: var(--bs-primary) !important;
+  border-radius: 0;
+  border-color: var(--bs-primary) !important;
+  transition: all 1.3s ease;
+  letter-spacing: 0.5px;
+}
+.wp-block-button__link:hover {
+  transition: all 1.3s ease;
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  filter: brightness(0.95);
+  letter-spacing: 1.5px;
+}
+
 :root {
   --woocommerce: #ff8154;
   --wc-green: #7ad03a;
