@@ -44,6 +44,17 @@ transition: all 1.3s ease;
 background-color: var(--bs-primary);
 }
 
+&.btn-primary {
+    background-color: var(--bs-primary);
+    border-radius: 0;
+
+    &:hover {
+            transition: all 1.3s ease;
+            background-color: var(--bs-primary);
+            filter: brightness(0.95);
+        }
+}
+
 &.btn-secondary {
     &:hover {
             transition: all 1.3s ease;

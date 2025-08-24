@@ -10,6 +10,15 @@
   transition: all 1.3s ease;
   background-color: var(--bs-primary);
 }
+.btn.btn-primary {
+  background-color: var(--bs-primary);
+  border-radius: 0;
+}
+.btn.btn-primary:hover {
+  transition: all 1.3s ease;
+  background-color: var(--bs-primary);
+  filter: brightness(0.95);
+}
 .btn.btn-secondary:hover {
   transition: all 1.3s ease;
   background-color: rgb(255, 110.2105263158, 58.5);
