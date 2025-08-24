@@ -24,9 +24,19 @@
   filter: brightness(0.95);
   letter-spacing: 1.5px;
 }
+.btn.btn-secondary {
+  background-color: var(--bs-secondary);
+  border-radius: 0;
+  border-color: var(--bs-secondary);
+  transition: all 1.3s ease;
+  letter-spacing: 0.5px;
+}
 .btn.btn-secondary:hover {
   transition: all 1.3s ease;
-  background-color: rgb(255, 110.2105263158, 58.5);
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+  filter: brightness(0.95);
+  letter-spacing: 1.5px;
 }
 .btn.btn-sm, .btn-group-sm > .btn {
   letter-spacing: 3px;
@@ -50,14 +60,16 @@
 }
 
 .woocommerce button.button.alt {
-  background-color: #ff8154;
+  background-color: var(--bs-primary);
   border-radius: 0;
   text-transform: uppercase;
   transition: all 1.3s ease;
 }
 .woocommerce button.button.alt:hover {
   transition: all 1.3s ease;
-  background-color: rgb(255, 110.2105263158, 58.5);
+  background-color: var(--bs-primary);
+  filter: brightness(0.95);
+  letter-spacing: 1.5px;
 }
 
 :root,
@@ -86,7 +98,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #0d6efd;
-  --bs-secondary: #ff8154;
+  --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -94,7 +106,7 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 13, 110, 253;
-  --bs-secondary-rgb: 255, 129, 84;
+  --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -102,7 +114,7 @@
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
   --bs-primary-text-emphasis: rgb(5.2, 44, 101.2);
-  --bs-secondary-text-emphasis: rgb(102, 51.6, 33.6);
+  --bs-secondary-text-emphasis: rgb(43.2, 46.8, 50);
   --bs-success-text-emphasis: rgb(10, 54, 33.6);
   --bs-info-text-emphasis: rgb(5.2, 80.8, 96);
   --bs-warning-text-emphasis: rgb(102, 77.2, 2.8);
@@ -110,7 +122,7 @@
   --bs-light-text-emphasis: #495057;
   --bs-dark-text-emphasis: #495057;
   --bs-primary-bg-subtle: rgb(206.6, 226, 254.6);
-  --bs-secondary-bg-subtle: rgb(255, 229.8, 220.8);
+  --bs-secondary-bg-subtle: rgb(225.6, 227.4, 229);
   --bs-success-bg-subtle: rgb(209, 231, 220.8);
   --bs-info-bg-subtle: rgb(206.6, 244.4, 252);
   --bs-warning-bg-subtle: rgb(255, 242.6, 205.4);
@@ -118,7 +130,7 @@
   --bs-light-bg-subtle: rgb(251.5, 252, 252.5);
   --bs-dark-bg-subtle: #ced4da;
   --bs-primary-border-subtle: rgb(158.2, 197, 254.2);
-  --bs-secondary-border-subtle: rgb(255, 204.6, 186.6);
+  --bs-secondary-border-subtle: rgb(196.2, 199.8, 203);
   --bs-success-border-subtle: rgb(163, 207, 186.6);
   --bs-info-border-subtle: rgb(158.2, 233.8, 249);
   --bs-warning-border-subtle: rgb(255, 230.2, 155.8);
@@ -148,7 +160,7 @@
   --bs-tertiary-color-rgb: 33, 37, 41;
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
-  --bs-heading-color: #ff8154;
+  --bs-heading-color: var(--bs-primary);
   --bs-link-color: #0d6efd;
   --bs-link-color-rgb: 13, 110, 253;
   --bs-link-decoration: underline;
@@ -204,7 +216,7 @@
   --bs-tertiary-bg: rgb(42.5, 47.5, 52.5);
   --bs-tertiary-bg-rgb: 43, 48, 53;
   --bs-primary-text-emphasis: rgb(109.8, 168, 253.8);
-  --bs-secondary-text-emphasis: rgb(255, 179.4, 152.4);
+  --bs-secondary-text-emphasis: rgb(166.8, 172.2, 177);
   --bs-success-text-emphasis: rgb(117, 183, 152.4);
   --bs-info-text-emphasis: rgb(109.8, 223.2, 246);
   --bs-warning-text-emphasis: rgb(255, 217.8, 106.2);
@@ -212,7 +224,7 @@
   --bs-light-text-emphasis: #f8f9fa;
   --bs-dark-text-emphasis: #dee2e6;
   --bs-primary-bg-subtle: rgb(2.6, 22, 50.6);
-  --bs-secondary-bg-subtle: rgb(51, 25.8, 16.8);
+  --bs-secondary-bg-subtle: rgb(21.6, 23.4, 25);
   --bs-success-bg-subtle: rgb(5, 27, 16.8);
   --bs-info-bg-subtle: rgb(2.6, 40.4, 48);
   --bs-warning-bg-subtle: rgb(51, 38.6, 1.4);
@@ -220,7 +232,7 @@
   --bs-light-bg-subtle: #343a40;
   --bs-dark-bg-subtle: #1a1d20;
   --bs-primary-border-subtle: rgb(7.8, 66, 151.8);
-  --bs-secondary-border-subtle: rgb(153, 77.4, 50.4);
+  --bs-secondary-border-subtle: rgb(64.8, 70.2, 75);
   --bs-success-border-subtle: rgb(15, 81, 50.4);
   --bs-info-border-subtle: rgb(7.8, 121.2, 144);
   --bs-warning-border-subtle: rgb(153, 115.8, 4.2);
@@ -285,20 +297,20 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: calc(1.419rem + 2.028vw);
+  font-size: calc(1.699rem + 5.388vw);
 }
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 2.94rem;
+    font-size: 5.74rem;
   }
 }
 
 h2, .h2 {
-  font-size: calc(1.349rem + 1.188vw);
+  font-size: calc(1.489rem + 2.868vw);
 }
 @media (min-width: 1200px) {
   h2, .h2 {
-    font-size: 2.24rem;
+    font-size: 3.64rem;
   }
 }
 
@@ -2044,7 +2056,7 @@ progress {
 }
 
 .text-bg-secondary {
-  color: #000 !important;
+  color: #fff !important;
   background-color: RGBA(var(--bs-secondary-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
@@ -2092,8 +2104,8 @@ progress {
   text-decoration-color: RGBA(var(--bs-secondary-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-secondary:hover, .link-secondary:focus {
-  color: RGBA(255, 154, 118, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(255, 154, 118, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(86, 94, 100, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(86, 94, 100, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-success {
@@ -3687,11 +3699,11 @@ progress {
 }
 
 .fs-1 {
-  font-size: calc(1.419rem + 2.028vw) !important;
+  font-size: calc(1.699rem + 5.388vw) !important;
 }
 
 .fs-2 {
-  font-size: calc(1.349rem + 1.188vw) !important;
+  font-size: calc(1.489rem + 2.868vw) !important;
 }
 
 .fs-3 {
@@ -7871,10 +7883,10 @@ progress {
 }
 @media (min-width: 1200px) {
   .fs-1 {
-    font-size: 2.94rem !important;
+    font-size: 5.74rem !important;
   }
   .fs-2 {
-    font-size: 2.24rem !important;
+    font-size: 3.64rem !important;
   }
   .fs-3 {
     font-size: 1.54rem !important;
@@ -8917,20 +8929,20 @@ textarea.form-control-lg {
 }
 
 .btn-secondary {
-  --bs-btn-color: #000;
-  --bs-btn-bg: #ff8154;
-  --bs-btn-border-color: #ff8154;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(255, 147.9, 109.65);
-  --bs-btn-hover-border-color: rgb(255, 141.6, 101.1);
-  --bs-btn-focus-shadow-rgb: 217, 110, 71;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: rgb(255, 154.2, 118.2);
-  --bs-btn-active-border-color: rgb(255, 141.6, 101.1);
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #6c757d;
+  --bs-btn-border-color: #6c757d;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgb(91.8, 99.45, 106.25);
+  --bs-btn-hover-border-color: rgb(86.4, 93.6, 100);
+  --bs-btn-focus-shadow-rgb: 130, 138, 145;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: rgb(86.4, 93.6, 100);
+  --bs-btn-active-border-color: rgb(81, 87.75, 93.75);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #ff8154;
-  --bs-btn-disabled-border-color: #ff8154;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #6c757d;
+  --bs-btn-disabled-border-color: #6c757d;
 }
 
 .btn-success {
@@ -9053,19 +9065,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-secondary {
-  --bs-btn-color: #ff8154;
-  --bs-btn-border-color: #ff8154;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #ff8154;
-  --bs-btn-hover-border-color: #ff8154;
-  --bs-btn-focus-shadow-rgb: 255, 129, 84;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #ff8154;
-  --bs-btn-active-border-color: #ff8154;
+  --bs-btn-color: #6c757d;
+  --bs-btn-border-color: #6c757d;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #6c757d;
+  --bs-btn-hover-border-color: #6c757d;
+  --bs-btn-focus-shadow-rgb: 108, 117, 125;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #6c757d;
+  --bs-btn-active-border-color: #6c757d;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #ff8154;
+  --bs-btn-disabled-color: #6c757d;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #ff8154;
+  --bs-btn-disabled-border-color: #6c757d;
   --bs-gradient: none;
 }
 
@@ -10536,7 +10548,7 @@ textarea.form-control-lg {
   height: 80%;
   top: 10%;
   left: 20px;
-  border-right: 3px solid #ff8154;
+  border-right: 3px solid #6c757d;
   pointer-events: none;
 }
 .section-block .animated-border-down {
@@ -10557,16 +10569,18 @@ textarea.form-control-lg {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: var(--bs-rabbit-primary);
+  background: #000;
 }
 .background-img-wrp.hero-img-wrp {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   z-index: 0;
 }
 .background-img-wrp.hero-img-wrp img {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   opacity: 0.8;
@@ -10745,8 +10759,8 @@ form.woocommerce-checkout #order_review {
 .woo-bunny-woo .product .product-wrp div.images .woocommerce-product-gallery__wrapper .bunny-after-img-wrp button.button.alt:hover {
   color: #fff;
   transition: all 1.3s ease;
-  background-color: rgb(255, 110.2105263158, 58.5);
-  border-color: rgb(255, 110.2105263158, 58.5);
+  background-color: rgb(96.1802575107, 104.19527897, 111.3197424893);
+  border-color: rgb(96.1802575107, 104.19527897, 111.3197424893);
   letter-spacing: 2px;
 }
 .woo-bunny-woo .product .product-wrp div.summary {
@@ -10803,7 +10817,7 @@ form.woocommerce-checkout #order_review {
 :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt,
 :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button.alt,
 :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button.alt {
-  background-color: #ff8154;
+  background-color: #6c757d;
   color: #fff;
   font-size: 1.1rem;
   padding: 15px 20px;
@@ -10822,7 +10836,7 @@ form.woocommerce-checkout #order_review {
 :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button.alt:hover,
 :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button.alt:hover {
   transition: all 1.3s ease;
-  background-color: rgb(255, 110.2105263158, 58.5);
+  background-color: rgb(96.1802575107, 104.19527897, 111.3197424893);
   letter-spacing: 2px;
 }
 

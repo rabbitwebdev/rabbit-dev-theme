@@ -199,17 +199,23 @@ add_action('init', 'devrabbit_theme_cleanup_head');
 
 function customrabbitstyles() {
     $primary_brand_colour = get_field('primary_brand_colour', 'option');
-
+    $secondary_brand_colour = get_field('secondary_brand_colour', 'option');
      if ($primary_brand_colour) {
         echo '<style>
             :root {
                 --bs-primary: ' . esc_attr($primary_brand_colour) . ';
                 --bs-primary-rgb: ' . esc_attr($primary_brand_colour) . ';
                 --bs-rabbit-primary: ' . esc_attr($primary_brand_colour) . ';
+                --bs-secondary: ' . esc_attr($secondary_brand_colour) . ';
+                --bs-secondary-rgb: ' . esc_attr($secondary_brand_colour) . ';
+                --bs-rabbit-secondary: ' . esc_attr($secondary_brand_colour) . ';
             }
             .bg-primary {
                 background-color:var(--bs-primary) !important;
             }  
+            .bg-secondary {
+                background-color:var(--bs-secondary) !important;
+            }
         </style>';
     }
 }

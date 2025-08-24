@@ -1,4 +1,4 @@
-$secondary: #ff8154;
+
 
 $spacer: 1rem;
 $spacers: (
@@ -60,9 +60,17 @@ background-color: var(--bs-primary);
 }
 
 &.btn-secondary {
+    background-color: var(--bs-secondary);
+    border-radius: 0;
+    border-color: var(--bs-secondary);
+    transition: all 1.3s ease;
+    letter-spacing: 0.5px;
     &:hover {
             transition: all 1.3s ease;
-            background-color: darken($secondary, 5);
+            background-color: var(--bs-secondary);
+            border-color: var(--bs-secondary);
+            filter: brightness(0.95);
+            letter-spacing: 1.5px;
         }
 }
 
@@ -89,14 +97,16 @@ background-color: var(--bs-primary);
 }
 
 .woocommerce button.button.alt {
-    background-color: $secondary;
+    background-color: var(--bs-primary);
     border-radius: 0;
     text-transform: uppercase;
     transition: all 1.3s ease;
 
     &:hover {
             transition: all 1.3s ease;
-            background-color: darken($secondary, 5);
+            background-color: var(--bs-primary);
+            filter: brightness(0.95);
+            letter-spacing: 1.5px;
         }
 }
 
