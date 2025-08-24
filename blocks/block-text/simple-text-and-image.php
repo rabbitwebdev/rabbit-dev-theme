@@ -124,7 +124,7 @@ $colposition = $style_data['col'];
   
 
 
-<div <?php echo esc_attr( $anchor ); ?> class="section-block <?php echo $turn_on_parallax ? 'overflow-hidden' : ' ' ; ?> <?php echo esc_attr( $class_name ); ?>   <?php echo esc_attr( $style ); ?>  "  >
+<div <?php echo esc_attr( $anchor ); ?> class="section-block <?php echo $turn_on_parallax ? 'overflow-hidden' : ' ' ; ?> overflow-hidden <?php echo esc_attr( $class_name ); ?>   <?php echo esc_attr( $style ); ?>  "  >
  <?php if ($animations == '1') { ?>
                  
               
