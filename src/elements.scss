@@ -286,3 +286,13 @@ $custom-colors: (
 
 // Merge the maps
 $theme-colors: map-merge($theme-colors, $custom-colors);
+
+.block-icon-grid {
+    &.theme-light {
+        .feature {
+            h2 {
+                color: #fff !important;
+            }
+        }
+    }
+}

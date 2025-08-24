@@ -10676,6 +10676,10 @@ form.woocommerce-checkout #order_review {
   background-color: var(--bs-custom-color) !important;
 }
 
+.block-icon-grid.theme-light .feature h2, .block-icon-grid.theme-light .feature .h2 {
+  color: #fff !important;
+}
+
 .woo-bunny-woo .product .product-wrp {
   flex-direction: row-reverse;
   justify-content: space-between;

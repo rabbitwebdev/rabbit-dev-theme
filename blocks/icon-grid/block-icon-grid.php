@@ -208,14 +208,10 @@ $alignimage = $style_data['align'];
         </div> <!-- Col end -->
     <?php endif; ?>
 
-
 </div> <!-- Row end -->
-
- 
-
 </div> <!-- Conatiner end -->
 
- <div class="container " id="featured-3">
+ <div class="<?php echo esc_attr( $width ); ?> " id="featured-3">
      <?php if( have_rows('the_icon_grid') ): ?>
    <div class="row g-4 py-5 row-cols-1 row-cols-md-2 justify-content-center row-cols-lg-3">
     <?php while( have_rows('the_icon_grid') ): the_row(); 
