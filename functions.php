@@ -201,6 +201,7 @@ function customrabbitstyles() {
     $primary_brand_colour = get_field('primary_brand_colour', 'option');
     $secondary_brand_colour = get_field('secondary_brand_colour', 'option');
     $navbar_colour = get_field('navbar_colour', 'option');
+    $custom_brand_colour = get_field('custom_brand_colour', 'option');
      if ($primary_brand_colour) {
         echo '<style>
             :root {
@@ -211,12 +212,16 @@ function customrabbitstyles() {
                 --bs-secondary-rgb: ' . esc_attr($secondary_brand_colour) . ';
                 --bs-rabbit-secondary: ' . esc_attr($secondary_brand_colour) . ';
                 --bs-navbar-color: ' . esc_attr($navbar_colour) . ';
+                --bs-custom-color: ' . esc_attr($custom_brand_colour) . ';
             }
             .bg-primary {
                 background-color:var(--bs-primary) !important;
             }  
             .bg-secondary {
                 background-color:var(--bs-secondary) !important;
+            }
+            .bg-custom-brand {
+                background-color:var(--bs-custom-color) !important;
             }
         </style>';
     }

@@ -10668,6 +10668,14 @@ form.woocommerce-checkout #order_review {
   }
 }
 
+.bg-indigo {
+  background-color: #6610f2 !important;
+}
+
+.bg-custom-brand {
+  background-color: var(--bs-custom-color) !important;
+}
+
 .woo-bunny-woo .product .product-wrp {
   flex-direction: row-reverse;
   justify-content: space-between;

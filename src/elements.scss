@@ -267,6 +267,18 @@ form.woocommerce-checkout {
         }
 }
 
+$colors: (
+    "indigo": $indigo,
+);
+
+.bg-indigo {
+    background-color: map-get($colors, "indigo") !important;
+}
+
+.bg-custom-brand {
+    background-color: var(--bs-custom-color) !important;
+}
+
 // Create your own map
 $custom-colors: (
     "primary": var(--bs-rabbit-primary)
