@@ -38,8 +38,8 @@ $display-font-sizes: (
 $headings-margin-bottom: $spacer * .5;
 $headings-font-family: null;
 $headings-font-style: null;
-$headings-font-weight: 600;
-$headings-line-height: 1.1;
+$headings-font-weight: 700;
+$headings-line-height: 1;
 $headings-color: var(--bs-primary);
 
 $display-font-family: null;
@@ -69,3 +69,7 @@ $font-sizes: (
     5: $h5-font-size,
     6: $h6-font-size
 );
+
+h1 {
+    font-weight: 900 !important;
+}
