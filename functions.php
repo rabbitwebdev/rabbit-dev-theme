@@ -204,8 +204,12 @@ function customrabbitstyles() {
         echo '<style>
             :root {
                 --bs-primary: ' . esc_attr($primary_brand_colour) . ';
-                --bs-primary-rgb ' . esc_attr($primary_brand_colour) . ';
+                --bs-primary-rgb: ' . esc_attr($primary_brand_colour) . ';
+                --bs-rabbit-primary: ' . esc_attr($primary_brand_colour) . ';
             }
+            .bg-primary {
+                background-color:var(--bs-primary) !important;
+            }  
         </style>';
     }
 }
