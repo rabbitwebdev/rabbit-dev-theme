@@ -9206,10 +9206,15 @@ textarea.form-control-lg {
 }
 
 .btn-lg, .btn-group-lg > .btn {
-  --bs-btn-padding-y: 5px;
+  --bs-btn-padding-y: 10px;
   --bs-btn-padding-x: 30px;
-  --bs-btn-font-size: 1.2rem;
+  --bs-btn-font-size: calc(1.265rem + 0.18vw);
   --bs-btn-border-radius: 0;
+}
+@media (min-width: 1200px) {
+  .btn-lg, .btn-group-lg > .btn {
+    --bs-btn-font-size: 1.4rem;
+  }
 }
 
 .btn-sm, .btn-group-sm > .btn {
