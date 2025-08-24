@@ -213,7 +213,7 @@ $alignimage = $style_data['align'];
 
  <div class="<?php echo esc_attr( $width ); ?> " id="featured-3">
      <?php if( have_rows('the_icon_grid') ): ?>
-   <div class="row g-4 py-5 row-cols-1 row-cols-md-2 justify-content-center row-cols-lg-3">
+   <div class="row g-4 py-4 row-cols-1 row-cols-md-3 justify-content-center row-cols-lg-3">
     <?php while( have_rows('the_icon_grid') ): the_row(); 
     
          $image = get_sub_field('icon');
@@ -225,15 +225,15 @@ $alignimage = $style_data['align'];
         ?>
 
          <div class="feature col mb-4 ">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center fade-in text-fade-in fs-2 mb-3"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <div class="feature-icon d-inline-flex align-items-center justify-content-center  fs-2 mb-3"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
             <?php if ($svg) { ?>
             <?php echo $svg ?>
             <?php } else { ?>
             <?php echo wp_get_attachment_image( $image['ID'], 'large', '', array( 'class' => '' ) ); ?>
             <?php } ?>
         </div>
-        <h2 class="fs-3 mb-3 text-fade-in"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><?php echo $title ?></h2>
-        <div class="WYSIWIG text-fade-in mb-3 <?php echo esc_attr( $style_txt_string ); ?>"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><?php echo $text ?></div>
+        <h2 class="fs-3 mb-3 text-uppercase "  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><?php echo $title ?></h2>
+        <div class="WYSIWIG  mb-3 <?php echo esc_attr( $style_txt_string ); ?>"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><?php echo $text ?></div>
         <?php if ($link) { 
               $link_url = $link['url'];
     $link_title = $link['title'];
