@@ -10827,7 +10827,7 @@ form.woocommerce-checkout #order_review {
   width: 100%;
 }
 .block-simple-hero .background-img-wrp {
-  background-color: var(--bs-rabbit-primary);
+  background-color: #000;
 }
 .block-simple-hero .background-img-wrp.hero-img-wrp.hero-full .simpleParallax {
   height: 100%;
