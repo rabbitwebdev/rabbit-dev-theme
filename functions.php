@@ -27,8 +27,6 @@ function devrabbit_theme_enqueue_scripts() {
 
     wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js', array('jquery'), '5.3.2', true);
 
-    wp_enqueue_script('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array('jquery'), '2.3.1', true);
-
        wp_enqueue_script('js-swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), '2.9.2', true);
 
     wp_enqueue_script('simplePara', 'https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js', array('jquery'), '5.5.1', false);
