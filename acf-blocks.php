@@ -248,6 +248,41 @@ acf_register_block_type(array(
 ));
 
 acf_register_block_type(array(
+    'name' => 'block-contact-form',
+    'title' => 'Block Contact Form',
+    'active' => true,
+    'description' => '',
+    'category' => 'common',
+    'icon' => array(
+        'background' => '',
+        'foreground' => '#8224e3',
+        'src' => 'media-text',
+    ),
+    'keywords' => array(),
+    'post_types' => array(),
+    'mode' => 'edit',
+    'align' => '',
+    'align_text' => '',
+    'align_content' => 'top',
+    'render_template' => '/blocks/block-contact-form/contact-form.php',
+    'render_callback' => '',
+    'enqueue_style' => '',
+    'enqueue_script' => '',
+    'enqueue_assets' => '',
+    'supports' => array(
+        'anchor' => true,
+        'align' => true,
+        'align_text' => false,
+        'align_content' => false,
+        'full_height' => false,
+        'mode' => true,
+        'multiple' => true,
+        'example' => array(),
+        'jsx' => false,
+    ),
+));
+
+acf_register_block_type(array(
     'name' => 'block-vertical-slider',
     'title' => 'Block Vertical Slider',
     'active' => true,
