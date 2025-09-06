@@ -213,7 +213,7 @@ $alignimage = $style_data['align'];
 
  <div class="<?php echo esc_attr( $width ); ?> " id="featured-3">
      <?php if( have_rows('the_icon_grid') ): ?>
-   <div class="row g-4 py-4 row-cols-1 row-cols-md-3 justify-content-center row-cols-lg-3">
+   <div class="row g-2 py-4 row-cols-1 row-cols-md-3 justify-content-center row-cols-lg-3">
     <?php while( have_rows('the_icon_grid') ): the_row(); 
     
          $image = get_sub_field('icon');
@@ -239,8 +239,11 @@ $alignimage = $style_data['align'];
     $link_title = $link['title'];
     $link_target = $link['target'] ? $link['target'] : '_self';
             ?>
-        <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo $link_target ?>" class="btn btn-lg btn-outline-light icon-link text-fade-in"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo $link_target ?>" class="btn btn-lg btn-underline-light icon-link text-fade-in"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
           <?php echo $link_title ?>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg>
         </a>
         <?php } else {  } ?>
       

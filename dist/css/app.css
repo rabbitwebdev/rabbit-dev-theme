@@ -41,6 +41,24 @@
 .btn.btn-sm, .btn-group-sm > .btn {
   letter-spacing: 3px;
 }
+.btn.btn-underline-light {
+  padding: 5px 0;
+  border: none;
+  border-bottom-width: medium;
+  border-bottom-style: none;
+  border-bottom-color: currentcolor;
+  font-size: 16px;
+  font-weight: 400;
+  border-bottom: 1px solid #fff;
+  width: auto;
+  text-align: left;
+  letter-spacing: 0px;
+  transition: all 1.3s ease;
+}
+.btn.btn-underline-light:hover {
+  letter-spacing: 1.5px;
+  transition: all 1.3s ease;
+}
 
 .wp-block-button__link {
   text-transform: uppercase;
