@@ -212,11 +212,11 @@ $alignimage = $style_data['align'];
     $form_id = get_field('the_form');
     if ($form_id) { ?>
 <div class="col">
-    <div class="form-wrp">
-        <?php gravity_form($form_id); ?>
+    <div class="form-wrp p-3">
+        <?php gravity_form( $form_id, false, false, false, null, true ); ?>
     </div>
     </div>
- <?php   } ?>
+ <?php  } ?>
 
 
 </div> <!-- Row end -->
