@@ -233,9 +233,9 @@ $alignimage = $style_data['align'];
             <?php echo wp_get_attachment_image( $image['ID'], 'large', '', array( 'class' => '' ) ); ?>
             <?php } ?>
         </div>
-        <h4 class="fs-4 mb-2 text-uppercase "  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <h2 class="fs-4 mb-2 text-uppercase "  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
             <?php echo $title ?>
-        </h4>
+        </h2>
         <?php if ($text) : ?>
         <div class="WYSIWIG  mb-2 <?php echo esc_attr( $style_txt_string ); ?>"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
             <?php echo $text ?>
