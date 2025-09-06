@@ -11074,6 +11074,11 @@ header#masthead.site-header.visible-color {
   top: 0;
   transition: all 1.3s;
 }
+@media (min-width: 768px) {
+  header#masthead.site-header.visible-color a.mega-menu-link {
+    color: #000 !important;
+  }
+}
 header#masthead.site-header.hidden {
   background-color: transparent;
   top: -80px;
