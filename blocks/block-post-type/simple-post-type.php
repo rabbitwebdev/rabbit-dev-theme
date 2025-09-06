@@ -219,11 +219,25 @@ if( $select_featured_posts ): ?>
     <?php foreach( $select_featured_posts as $featured_post ): 
    $permalink = get_permalink( $featured_post->ID );
         $title = get_the_title( $featured_post->ID );
+        $image_url = get_the_post_thumbnail_url( $featured_post->ID, 'full' );
         $custom_field = get_field( 'field_name', $featured_post->ID );
         ?>
         <div class="col">
-            <a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
-            <span>A custom field from this post: <?php echo esc_html( $custom_field ); ?></span>
+
+
+<div class="card text-bg-dark">
+  <img src="<?php echo esc_url( $image_url ); ?>" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
+    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+  </div>
+</div>
+
+
+            
+          
         </div>
     <?php endforeach; ?>
     </div>
