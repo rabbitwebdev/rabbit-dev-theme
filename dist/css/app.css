@@ -10723,6 +10723,14 @@ form.woocommerce-checkout #order_review {
   color: #fff !important;
 }
 
+.block-contact-form-section .form-wrp {
+  background-color: aliceblue;
+  border: 2px solid #000;
+  border-radius: 8px;
+  max-width: 90%;
+  margin: auto;
+}
+
 .woo-bunny-woo .product .product-wrp {
   flex-direction: row-reverse;
   justify-content: space-between;

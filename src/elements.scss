@@ -296,3 +296,14 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
         }
     }
 }
+
+.block-contact-form-section {
+    .form-wrp {
+    background-color: aliceblue;
+        border: 2px solid #000;
+        border-radius: 8px;
+        max-width: 90%;
+        margin: auto;
+
+    }
+}

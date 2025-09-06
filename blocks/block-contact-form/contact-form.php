@@ -212,7 +212,7 @@ $alignimage = $style_data['align'];
     $form_id = get_field('the_form');
     if ($form_id) { ?>
 <div class="col">
-    <div class="form-wrp p-3">
+    <div class="form-wrp p-3"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
         <?php gravity_form( $form_id, false, false, false, null, true ); ?>
     </div>
     </div>
@@ -222,35 +222,6 @@ $alignimage = $style_data['align'];
 </div> <!-- Row end -->
 </div> <!-- Conatiner end -->
 <?php } ?>
-<?php
-$select_featured_posts = get_field('select_featured_posts');
-$card_spacing = get_field('card_spacing');
-if( $select_featured_posts ): ?>
-<div class="container-fluid <?php echo $card_spacing ; ?> ">
-    <div class="row row-cols-2 <?php echo $card_spacing ; ?> row-cols-md-2 row-cols-lg-4">
-    <?php foreach( $select_featured_posts as $featured_post ): 
-   $permalink = get_permalink( $featured_post->ID );
-        $title = get_the_title( $featured_post->ID );
-        $image_url = get_the_post_thumbnail_url( $featured_post->ID, 'full' );
-        $custom_field = get_field( 'field_name', $featured_post->ID );
-        ?>
-        <div class="col">
-
-                <a class="card post-type-card h-100 bg-black text-bg-dark border-0 rounded-0" href="<?php echo esc_url( $permalink ); ?>" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                <img src="<?php echo esc_url( $image_url ); ?>" class="card-img h-100 object-fit-cover rounded-0 opacity-50" alt="...">
-                <div class="card-img-overlay d-flex align-items-center justify-content-center">
-                    <h5 class="card-title text-uppercase"><?php echo esc_html( $title ); ?></h5>
-                </div>
-                </a>
-
-
-            
-          
-        </div>
-    <?php endforeach; ?>
-    </div>
-    </div>
-<?php endif; ?>
     
 </div> <!-- Block end -->
 
