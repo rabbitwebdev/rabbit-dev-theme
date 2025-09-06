@@ -49,6 +49,7 @@
   border-bottom-color: currentcolor;
   font-size: 16px;
   font-weight: 400;
+  color: #fff;
   border-bottom: 1px solid #fff;
   width: auto;
   text-align: left;
@@ -56,6 +57,7 @@
   transition: all 1.3s ease;
 }
 .btn.btn-underline-light:hover {
+  color: #fff;
   letter-spacing: 1.5px;
   transition: all 1.3s ease;
 }

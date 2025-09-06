@@ -149,9 +149,10 @@ $alignimage = $style_data['align'];
          <img class=" <?php echo $img_scroll; ?> " src="<?php echo esc_url($block_background_image['url']); ?>" alt="<?php echo esc_attr($block_background_image['alt']); ?>" />
     </div>
 <?php endif; ?>
+ <?php if ($content) { ?>
 <div class=" <?php echo esc_attr( $width ); ?>"> <!-- Conatiner -->
 <div class="row align-items-center justify-content-center <?php echo $reverse_block ; ?> "> <!-- Row -->
-  <?php if ($content) { ?>
+ 
     <div class="<?php echo esc_attr( $col_width ); ?>"> <!-- Col -->
         <div class="content-wrp <?php echo esc_attr( $content_wrap_size ) ;?>"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
         <?php if ( $title_text ) : ?>
@@ -186,7 +187,7 @@ $alignimage = $style_data['align'];
    
       </div> <!-- Content end -->
 </div> <!-- Col end -->
-<?php } ?>
+
 
     <?php if ( $image_block ) : 
     // Image variables.
@@ -210,10 +211,10 @@ $alignimage = $style_data['align'];
 
 </div> <!-- Row end -->
 </div> <!-- Conatiner end -->
-
+<?php } ?>
  <div class="<?php echo esc_attr( $width ); ?> " id="featured-3">
      <?php if( have_rows('the_icon_grid') ): ?>
-   <div class="row g-2 py-4 row-cols-1 row-cols-md-3 justify-content-center row-cols-lg-3">
+   <div class="row g-2 py-4 row-cols-2 row-cols-md-4 justify-content-center row-cols-lg-4">
     <?php while( have_rows('the_icon_grid') ): the_row(); 
     
          $image = get_sub_field('icon');
@@ -225,15 +226,21 @@ $alignimage = $style_data['align'];
         ?>
 
          <div class="feature col mb-4 ">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center  fs-2 mb-3"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <div class="feature-icon d-inline-flex align-items-center justify-content-center  fs-2 mb-2"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
             <?php if ($svg) { ?>
             <?php echo $svg ?>
             <?php } else { ?>
             <?php echo wp_get_attachment_image( $image['ID'], 'large', '', array( 'class' => '' ) ); ?>
             <?php } ?>
         </div>
-        <h2 class="fs-3 mb-3 text-uppercase "  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><?php echo $title ?></h2>
-        <div class="WYSIWIG  mb-3 <?php echo esc_attr( $style_txt_string ); ?>"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><?php echo $text ?></div>
+        <h4 class="fs-4 mb-2 text-uppercase "  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <?php echo $title ?>
+        </h4>
+        <?php if ($text) : ?>
+        <div class="WYSIWIG  mb-2 <?php echo esc_attr( $style_txt_string ); ?>"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <?php echo $text ?>
+        </div>
+        <?php endif ; ?>
         <?php if ($link) { 
               $link_url = $link['url'];
     $link_title = $link['title'];
