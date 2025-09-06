@@ -10931,7 +10931,7 @@ form.woocommerce-checkout #order_review {
   height: 100%;
   -o-object-fit: cover !important;
      object-fit: cover !important;
-  opacity: 0.2;
+  opacity: 0.5;
   margin: auto;
 }
 .block-simple-hero .background-img-wrp.hero-img-wrp .simpleParallax {
@@ -10944,7 +10944,7 @@ form.woocommerce-checkout #order_review {
   height: 50vh;
   -o-object-fit: contain;
      object-fit: contain;
-  opacity: 0.2;
+  opacity: 0.5;
   margin: auto;
 }
 .block-simple-hero .background-img-wrp.hero-img-wrp img {
@@ -10952,7 +10952,7 @@ form.woocommerce-checkout #order_review {
   height: 50vh;
   -o-object-fit: contain;
      object-fit: contain;
-  opacity: 0.2;
+  opacity: 0.5;
   margin: auto;
 }
 .block-simple-hero .background-img-wrp.hero-img-wrp {
