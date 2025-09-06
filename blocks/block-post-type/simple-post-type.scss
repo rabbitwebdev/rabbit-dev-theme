@@ -3,8 +3,24 @@
 
     .post-type-card {
         h5 {
+            transition: ease 1.2s;
             @include media-breakpoint-down(sm) {
                 font-size: 15px !important;
+            }
+        }
+
+        img.card-img {
+            transition: ease 1.2s;
+        }
+
+        &:hover {
+            h5 {
+                letter-spacing: 1px;
+                transition: ease 1.2s;
+            }
+            img.card-img {
+                filter: opacity(77.1%);
+                    transition: ease 1.2s;
             }
         }
     }

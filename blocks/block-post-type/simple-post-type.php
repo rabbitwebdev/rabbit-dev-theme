@@ -227,7 +227,7 @@ if( $select_featured_posts ): ?>
         <div class="col">
 
                 <a class="card post-type-card h-100 bg-black text-bg-dark border-0 rounded-0" href="<?php echo esc_url( $permalink ); ?>" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                <img src="<?php echo esc_url( $image_url ); ?>" class="card-img h-100 object-fit-cover opacity-50" alt="...">
+                <img src="<?php echo esc_url( $image_url ); ?>" class="card-img h-100 object-fit-cover rounded-0 opacity-50" alt="...">
                 <div class="card-img-overlay d-flex align-items-center justify-content-center">
                     <h5 class="card-title text-uppercase"><?php echo esc_html( $title ); ?></h5>
                 </div>

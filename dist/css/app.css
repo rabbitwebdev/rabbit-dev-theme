@@ -11034,10 +11034,24 @@ form.woocommerce-checkout #order_review {
 .block-post-type-section {
   position: relative;
 }
+.block-post-type-section .post-type-card h5, .block-post-type-section .post-type-card .h5 {
+  transition: ease 1.2s;
+}
 @media (max-width: 575.98px) {
   .block-post-type-section .post-type-card h5, .block-post-type-section .post-type-card .h5 {
     font-size: 15px !important;
   }
+}
+.block-post-type-section .post-type-card img.card-img {
+  transition: ease 1.2s;
+}
+.block-post-type-section .post-type-card:hover h5, .block-post-type-section .post-type-card:hover .h5 {
+  letter-spacing: 1px;
+  transition: ease 1.2s;
+}
+.block-post-type-section .post-type-card:hover img.card-img {
+  filter: opacity(77.1%);
+  transition: ease 1.2s;
 }
 
 header#masthead {
