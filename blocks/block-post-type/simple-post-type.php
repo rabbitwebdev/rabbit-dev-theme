@@ -214,9 +214,10 @@ $alignimage = $style_data['align'];
 <?php } ?>
 <?php
 $select_featured_posts = get_field('select_featured_posts');
+$card_spacing = get_field('card_spacing');
 if( $select_featured_posts ): ?>
-<div class="container-fluid">
-    <div class="row row-cols-1 g-0 row-cols-md-2 row-cols-lg-4">
+<div class="container-fluid <?php echo $card_spacing ; ?> ">
+    <div class="row row-cols-2 <?php echo $card_spacing ; ?> row-cols-md-2 row-cols-lg-4">
     <?php foreach( $select_featured_posts as $featured_post ): 
    $permalink = get_permalink( $featured_post->ID );
         $title = get_the_title( $featured_post->ID );
