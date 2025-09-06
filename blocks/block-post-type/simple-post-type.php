@@ -212,57 +212,24 @@ $alignimage = $style_data['align'];
 </div> <!-- Row end -->
 </div> <!-- Conatiner end -->
 <?php } ?>
- <div class="<?php echo esc_attr( $width ); ?> " id="featured-3">
-     <?php if( have_rows('the_icon_grid') ): ?>
-   <div class="row g-2 py-4 row-cols-2 row-cols-md-4 justify-content-center row-cols-lg-4">
-    <?php while( have_rows('the_icon_grid') ): the_row(); 
-    
-         $image = get_sub_field('icon');
-         $title = get_sub_field('title');
-          $text = get_sub_field('text');
-          $svg = get_sub_field('icon_code');
-           $link = get_sub_field('link');
-          
-        ?>
+<?php
+$select_featured_posts = get_field('select_featured_posts');
+if( $select_featured_posts ): ?>
+    <div class="row row-cols-2">
+    <?php foreach( $select_featured_posts as $post ): 
 
-         <div class="feature col mb-4 ">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center  fs-2 mb-2"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-            <?php if ($svg) { ?>
-            <?php echo $svg ?>
-            <?php } else { ?>
-            <?php echo wp_get_attachment_image( $image['ID'], 'large', '', array( 'class' => '' ) ); ?>
-            <?php } ?>
+        // Setup this post for WP functions (variable must be named $post).
+        setup_postdata($post); ?>
+        <div class="col">
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            <span>A custom field from this post: <?php the_field( 'field_name' ); ?></span>
         </div>
-        <h2 class="fs-4 mb-2 text-uppercase "  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-            <?php echo $title ?>
-        </h2>
-        <?php if ($text) : ?>
-        <div class="WYSIWIG  mb-2 <?php echo esc_attr( $style_txt_string ); ?>"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-            <?php echo $text ?>
-        </div>
-        <?php endif ; ?>
-        <?php if ($link) { 
-              $link_url = $link['url'];
-    $link_title = $link['title'];
-    $link_target = $link['target'] ? $link['target'] : '_self';
-            ?>
-        <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo $link_target ?>" class="btn btn-lg btn-underline-light icon-link text-fade-in"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-          <?php echo $link_title ?>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-</svg>
-        </a>
-        <?php } else {  } ?>
-      
-      </div>
-
-
-      
-        
-    <?php endwhile; ?>
-     </div>
+    <?php endforeach; ?>
+    </div>
+    <?php 
+    // Reset the global post object so that the rest of the page works correctly.
+    wp_reset_postdata(); ?>
 <?php endif; ?>
-     </div>
     
 </div> <!-- Block end -->
 
