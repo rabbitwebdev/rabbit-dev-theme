@@ -216,7 +216,7 @@ $alignimage = $style_data['align'];
 $select_featured_posts = get_field('select_featured_posts');
 if( $select_featured_posts ): ?>
 <div class="container-fluid">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+    <div class="row row-cols-1 align-items-center row-cols-md-2 row-cols-lg-4">
     <?php foreach( $select_featured_posts as $featured_post ): 
    $permalink = get_permalink( $featured_post->ID );
         $title = get_the_title( $featured_post->ID );
@@ -225,8 +225,8 @@ if( $select_featured_posts ): ?>
         ?>
         <div class="col">
 
-                <a class="card h-100 bg-dark text-bg-dark border-0 rounded-0" href="<?php echo esc_url( $permalink ); ?>">
-                <img src="<?php echo esc_url( $image_url ); ?>" class="card-img opacity-50" alt="...">
+                <a class="card post-type-card h-50 bg-black text-bg-dark border-0 rounded-0" href="<?php echo esc_url( $permalink ); ?>" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <img src="<?php echo esc_url( $image_url ); ?>" class="card-img object-fit-cover opacity-50" alt="...">
                 <div class="card-img-overlay d-flex align-items-center justify-content-center">
                     <h5 class="card-title text-uppercase"><?php echo esc_html( $title ); ?></h5>
                 </div>

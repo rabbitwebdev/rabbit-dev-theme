@@ -11031,6 +11031,15 @@ form.woocommerce-checkout #order_review {
   align-items: center;
 }
 
+.block-post-type-section {
+  position: relative;
+}
+@media (max-width: 575.98px) {
+  .block-post-type-section .post-type-card h5, .block-post-type-section .post-type-card .h5 {
+    font-size: 15px !important;
+  }
+}
+
 header#masthead {
   position: fixed;
   /* Transition effect when sliding down (and up) */

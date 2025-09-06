@@ -1,0 +1,11 @@
+.block-post-type-section {
+    position: relative;
+
+    .post-type-card {
+        h5 {
+            @include media-breakpoint-down(sm) {
+                font-size: 15px !important;
+            }
+        }
+    }
+}
