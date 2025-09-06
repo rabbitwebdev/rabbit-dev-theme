@@ -225,10 +225,10 @@ if( $select_featured_posts ): ?>
         ?>
         <div class="col">
 
-                <a class="card h-100 text-bg-dark border-0 " href="<?php echo esc_url( $permalink ); ?>">
-                <img src="<?php echo esc_url( $image_url ); ?>" class="card-img " alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title"><?php echo esc_html( $title ); ?></h5>
+                <a class="card h-100 bg-dark text-bg-dark border-0 rounded-0" href="<?php echo esc_url( $permalink ); ?>">
+                <img src="<?php echo esc_url( $image_url ); ?>" class="card-img opacity-50" alt="...">
+                <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                    <h5 class="card-title text-uppercase"><?php echo esc_html( $title ); ?></h5>
                 </div>
                 </a>
 
